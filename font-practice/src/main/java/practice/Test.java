@@ -15,12 +15,15 @@ public class Test {
         Graphics g = img.getGraphics();
         g.setFont(font);
         FontRenderContext fontRenderContext = g.getFontMetrics().getFontRenderContext();
-        GlyphVector glyphVector = font.createGlyphVector(fontRenderContext,"가나다라마바사");
 
-        System.out.println("무슨 폰트?: "+g.getFontMetrics().getFont());
-        System.out.println("테두리: "+glyphVector.getGlyphOutline(0).getBounds()); //getBounds?
+        GlyphVector glyphVector = font.createGlyphVector(fontRenderContext,"가나다라마바사");
+        System.out.println(font.getNumGlyphs());
+
+/*
+        System.out.println("폰트 정보: "+g.getFontMetrics().getFont());
+        System.out.println("테두리: "+glyphVector.getGlyphOutline(0).getBounds()); //getBounds
         System.out.println("텍스트 안의 글리프 개수: "+glyphVector.getNumGlyphs());
-        System.out.println(glyphVector.getGlyphCode(0));// getGlyphCode?
+        System.out.println(glyphVector.getGlyphCode(0));// getGlyphCode
         System.out.println("현재 인덱스 출력: "+ glyphVector.getGlyphCharIndex(0));
 
         System.out.println("-----------------");
@@ -37,7 +40,7 @@ public class Test {
 
         System.out.println("------------------");
         System.out.println(glyphVector.getGlyphPosition(0));
-        System.out.println(glyphVector.getFont());
+        System.out.println(glyphVector.getFont());*/
 
 
 //        System.out.println(glyphVector.getGlyphTransform(0).getScaleX());
